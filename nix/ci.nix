@@ -33,7 +33,7 @@ let
     native = {
       haskell = mkHaskellJobsFor pkgs.hsPkgs;
       haskellNoAsserts = (mkHaskellJobsFor pkgs.hsPkgsNoAsserts).exes;
-    } // lib.optionalAttrs (buildSystem == "x86_64-linux") {
+    } // lib.optionalAttrs (buildSystem == "aarch64-darwin") {
       formatting = import ./formatting.nix pkgs;
       inherit (pkgs) consensus-pdfs;
 
